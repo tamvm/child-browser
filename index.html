@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>My Page</title>
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <link href='css/themes/default/jquery.mobile.structure-1.1.1.css' rel='stylesheet' />
+    <link href='css/themes/default/jquery.mobile-1.1.1.css' rel='stylesheet' />
+    <link href='css/style.css' rel='stylesheet' />
+    <script src='js/jquery-1.7.1.min.js'></script>
+    <script src='js/jquery.mobile-1.1.1.min.js'></script>
+  </head>
+  <body>
+    <div data-role='page'>
+      <div data-role='content'>
+        <div id='header'>
+          <img alt='Inner Browser' id='logo' src='image/rsz_sample_browser.png' />
+          <h4>Phonegap Project</h4>
+          <div class='intro'>
+            My app has a child browser that external pages are being opened there. Those pages usually require authentication, so the user has to insert his username and password there each time.
+          </div>
+        </div>
+        <div id='features'>
+          <ul data-dividertheme='f' data-inset='true' data-role='listview' data-theme='c'>
+            <li class='ui-li ui-li-divider ui-bar-f ui-corner-top' data-role='list-divider'>
+              Features
+            </li>
+            <li>
+              <a href='login.html'>Login</a>
+            </li>
+            <li class='ui-icon-plus'>
+              <a href='add.html'>Add Page</a>
+            </li>
+            <li class='ui-icon-grid'>
+              <a href='manage.html'>Manage Page</a>
+            </li>
+          </ul>
+        </div>
+        <div id='saved-pages'>
+          <ul data-inset='true' data-role='listview'>
+            <li class='ui-bar-b' data-role='list-divider'>
+              Saved Pages
+            </li>
+            <li>
+              <a href='www.google.com'>
+                <h3>Google</h3>
+                <p>www.google.com</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

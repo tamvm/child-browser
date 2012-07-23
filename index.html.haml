@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title My Page
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+
+    %link{:href => "css/themes/default/jquery.mobile.structure-1.1.1.css", :rel => "stylesheet"}
+    %link{:href => "css/themes/default/jquery.mobile-1.1.1.css", :rel => "stylesheet"}
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "js/jquery.mobile-1.1.1.min.js"}
+  %body
+    %div{"data-role" => "page"}
+      %div{"data-role" => "content"}
+        #header
+          %img#logo{"src" => "image/rsz_sample_browser.png", "alt" => "Inner Browser"}
+          %h4 Phonegap Project
+          .intro
+            My app has a child browser that external pages are being opened there. Those pages usually require authentication, so the user has to insert his username and password there each time.
+        #features
+          %ul{"data-role" => "listview", "data-inset" => "true", "data-theme" => "c", "data-dividertheme" => "f"}
+            %li{"data-role" => "list-divider", "class" => "ui-li ui-li-divider ui-bar-f ui-corner-top"}
+              Features
+            %li
+              %a{"href" => "login.html"} Login
+            %li{"class" => "ui-icon-plus"}
+              %a{"href" => "add.html"} Add Page
+            %li{"class" => "ui-icon-grid"}
+              %a{"href" => "manage.html"} Manage Page
+
+        #saved-pages
+          %ul{"data-role" => "listview", "data-inset" => "true"}
+            %li{"data-role" => "list-divider", "class" => "ui-bar-b"}
+              Saved Pages
+            %li
+              %a{"href" => "www.google.com"}
+                %h3 Google
+                %p www.google.com
+

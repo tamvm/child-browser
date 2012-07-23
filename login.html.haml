@@ -1,0 +1,43 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Login Page
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+
+    %link{:href => "css/themes/default/jquery.mobile.structure-1.1.1.css", :rel => "stylesheet"}
+    %link{:href => "css/themes/default/jquery.mobile-1.1.1.css", :rel => "stylesheet"}
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "js/jquery.mobile-1.1.1.min.js"}
+  %body
+    %div{"data-role" => "page", "data-theme" => "b"}
+      %div{"data-icon" => "home", "data-role" => "header", "data-theme" => "b"}
+        %h1 Home
+        %a{"data-icon" => "home", "data-iconpos" => "notext", "data-role" => "button", "data-theme" => "b", :href => "index.html", :rel => "internal"}
+      %div{"data-role" => "content", "data-theme" => "b"}
+        -# .ui-corner-all.ui-controlgroup.ui-controlgroup-horizontal{"data-role" => "controlgroup", "data-type" => "horizontal"}
+          %a.ui-btn.ui-btn-inline.ui-btn-icon-left.ui-corner-left.ui-btn-up-c{"data-icon" => "info", "data-inline" => "true", "data-role" => "button", "data-theme" => "c", :href => "#"}
+            %span.ui-btn-inner.ui-corner-left
+              %span.ui-btn-text Help
+              %span.ui-icon.ui-icon-gear.ui-icon-shadow
+          %a.ui-btn.ui-btn-inline.ui-btn-icon-left.ui-corner-right.ui-controlgroup-last.ui-btn-up-c{"data-icon" => "refresh", "data-inline" => "true", "data-role" => "button", "data-theme" => "c", :href => "#"}
+            %span.ui-btn-inner.ui-corner-right.ui-controlgroup-last
+              %span.ui-btn-text Refresh
+              %span.ui-icon.ui-icon-refresh.ui-icon-shadow
+        %br
+        %br
+        %form#login
+          .ui-field-contain.ui-body.ui-br{"data-role" => "fieldcontain"}
+            %label.ui-input-text{:for => "name"} Username:
+            %input#name.ui-input-text.ui-body-null.ui-corner-all.ui-shadow-inset.ui-body-c{:name => "name", :type => "text", :value => ""}
+          .ui-field-contain.ui-body.ui-br{"data-role" => "fieldcontain"}
+            %label.ui-input-text{:for => "name"} Password:
+            %input#password.ui-input-text.ui-body-null.ui-corner-all.ui-shadow-inset.ui-body-c{:name => "password", :type => "password", :value => ""}
+          %fieldset.ui-grid-a
+            .ui-block-a
+              %button.ui-btn-hidden#submit-btn{"aria-disabled" => "false", "data-theme" => "b", :type => "submit"} Login
+            .ui-block-b
+              %button.ui-btn-hidden#reset-btn{"aria-disabled" => "false", "data-theme" => "b", :type => "reset"} Clear
+        %br
+      %div{"data-role" => "footer", "data-theme" => "b"}
+        %h4 Copyright &copy; 2011
